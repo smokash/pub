@@ -88,7 +88,13 @@
             $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
         });
 
-
+        $.getJSON(
+            "http://my-location-is.appspot.com/callback?callback=?"
+        ).done(function(data) {
+            $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>")
+        }).fail(function() {
+            $('#geoip3').html("<tr><td>你访问不了谷歌</td></tr>")
+        });
     });
     var clicky_site_ids = clicky_site_ids || [];
     clicky_site_ids.push(101180493);
