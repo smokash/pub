@@ -24,7 +24,7 @@
                     从国内测试
                 </div>
                 <div class="card-body">
-                    <p><span id="geoip1" class="h2 mb-0">
+                    <p><span id="geoip1" class="h3 mb-0">
                             <img src="images/loading2.gif" />
                         </span></p>
                     <p>这是您访问国内网站所使用的IP</p>
@@ -39,7 +39,7 @@
                     从国外测试
                 </div>
                 <div class="card-body">
-                    <p><span id="geoip2" class="h2 mb-0">
+                    <p><span id="geoip2" class="h3 mb-0">
                             <img src="images/loading2.gif" />
                         </span></p>
                     <p>您访问没有被封的国外网站所使用的IP</p>
@@ -54,7 +54,7 @@
                     从谷歌测试
                 </div>
                 <div class="card-body">
-                    <p><span id="geoip3" class="h2 mb-0">
+                    <p><span id="geoip3" class="h3 mb-0">
                             <img src="images/loading2.gif" />
                         </span></p>
                     <p>这是您访问 谷歌 等网站所使用的IP</p>
@@ -76,19 +76,19 @@
         });
 
         function callback_geotable(id, res){
-            $(id).html('<tr><td class="text-right" width="60">country:</td><td class="text-left">'+res.country_name+'</td></tr><tr><td class="text-right">city:</td><td class="text-left">'+res.city+'</td></tr><tr><td class="text-right">asn:</td><td class="text-left">'+res.asn+'</td></tr><tr><td class="text-right">org:</td><td class="text-left">'+res.org+'</td></tr>');
+            $(id).html('<tr><td class="text-right" width="60">国家:</td><td class="text-left"><img src="'+res.country_flag+'" width=25/> '+res.country+'</td></tr><tr><td class="text-right">地区:</td><td class="text-left">'+res.region+'</td></tr><tr><td class="text-right">ASN:</td><td class="text-left">'+res.asn+'</td></tr><tr><td class="text-right">ISP:</td><td class="text-left">'+res.org+'</td></tr>');
         }
 
         if (returnCitySN) {
             $('#geoip1').html(returnCitySN['cip']);
-            $.getJSON("https://ipapi.co/"+returnCitySN['cip']+"/json/").done(function(res) {
+            $.getJSON("http://free.ipwhois.io/json/"+returnCitySN['cip']+"?lang=zh-CN").done(function(res) {
                 callback_geotable("#geoip1-table",res);
             }).fail(function() {
                 console.log("faild!")
             });
         }
 
-        $.getJSON("http://free.ipwhois.io/json").done(function(res) {
+        $.getJSON("http://free.ipwhois.io/json/?lang=zh-CN").done(function(res) {
             $('#geoip2').html(res.ip);
             callback_geotable("#geoip2-table",res);
         }).fail(function() {
@@ -99,7 +99,7 @@
             "http://my-location-is.appspot.com/callback?callback=?"
         ).done(function(data) {
             $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>");
-            $.getJSON("https://ipapi.co/"+data.ip+"/json/").done(function(res) {
+            $.getJSON("http://free.ipwhois.io/json/"+data.ip+"?lang=zh-CN").done(function(res) {
                 callback_geotable("#geoip3-table",res);
             }).fail(function() {
                 console.log("faild!")
