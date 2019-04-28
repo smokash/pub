@@ -25,12 +25,22 @@
                 </div>
                 <div class="card-body">
                     <p>
-                        <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-                        <table id="360_GeoResults"></table>
+                        <script src="http://whois.pconline.com.cn/ipJson.jsp"></script>
                         <script>
-                        alert(returnCitySN["cip"]+','+returnCitySN["cname"])
-                       
+                        //alert(returnCitySN["cip"]+','+returnCitySN["cname"])
                         </script>
+
+                        <table id="pconline_GeoResults"></table>
+                        <script>
+                        function pconline_callback(data) {
+                            var table_body = "";
+                            $.each(data, function(k, v) {
+                                table_body += "<tr><td>" + k + "</td><td><b>" + v + "</b></td></tr>";
+                            });
+                            $("#pconline_GeoResults").html(table_body);
+                        }
+                        </script>
+                        <script src="http://whois.pconline.com.cn/ipJson.jsp?callback=pconline_callback"></script>
                     </p>
                     <p>这是您访问国内网站所使用的IP</p>
                 </div>
