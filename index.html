@@ -9,6 +9,11 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    $.ajaxSetup({
+        timeout: 10 * 1000
+    });
+    </script>
 </head>
 
 <body>
@@ -68,7 +73,8 @@
                     从谷歌测试
                 </div>
                 <div class="card-body">
-                    <p><table id="geoip3" align="center">
+                    <p>
+                        <table id="geoip3" align="center">
                             <tr>
                                 <td><img src="images/loading3.gif" /></td>
                             </tr>
