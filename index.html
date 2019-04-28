@@ -91,7 +91,7 @@ $(function() {
         $('#geoip1').html("<tr><td>" + returnCitySN['cip'] + "</td></tr>")
     }
 
-    $.get("https://api.ipify.org/").done(function(data) {
+    $.get("http://api.ipify.org/").done(function(data) {
         $('#geoip2').html("<tr><td>" + data + "</td></tr>")
     }).fail(function() {
         $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
