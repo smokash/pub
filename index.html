@@ -71,7 +71,31 @@
         <footer>
         </footer>
     </div>
+    <script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
     <script>
+    $(function() {
+        $.ajaxSetup({
+            async: true,
+            timeout: 10 * 1000
+        });
+        if (returnCitySN) {
+            $('#geoip1').html("<tr><td>" + returnCitySN['cip'] + "</td></tr>")
+        }
+
+        $.get("http://api.ipify.org/").done(function(data) {
+            $('#geoip2').html("<tr><td>" + data + "</td></tr>")
+        }).fail(function() {
+            $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
+        });
+
+        $.getJSON(
+            "http://my-location-is.appspot.com/callback?callback=?"
+        ).done(function(data) {
+            $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>")
+        }).fail(function() {
+            $('#geoip3').html("<tr><td>你访问不了谷歌</td></tr>")
+        });
+    });
     var clicky_site_ids = clicky_site_ids || [];
     clicky_site_ids.push(101180493);
     </script>
@@ -80,31 +104,5 @@
         <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101180493ns.gif" /></p>
     </noscript>
 </body>
-<script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-<script>
-$(function() {
-    $.ajaxSetup({
-        async: true,
-        timeout: 10 * 1000
-    });
-    if(returnCitySN){
-        $('#geoip1').html("<tr><td>" + returnCitySN['cip'] + "</td></tr>")
-    }
-
-    $.get("http://api.ipify.org/").done(function(data) {
-        $('#geoip2').html("<tr><td>" + data + "</td></tr>")
-    }).fail(function() {
-        $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
-    });
-
-    $.getJSON(
-        "http://my-location-is.appspot.com/callback?callback=?"
-    ).done(function(data) {
-        $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>")
-    }).fail(function() {
-        $('#geoip3').html("<tr><td>你访问不了谷歌</td></tr>")
-    });
-});
-</script>
 
 </html>
