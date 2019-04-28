@@ -88,13 +88,9 @@
             });
         }
 
-        $.get("http://api.ipify.org/").done(function(data) {
-            $('#geoip2').html(data);
-            $.getJSON("https://ipapi.co/"+data+"/json/").done(function(res) {
-                callback_geotable("#geoip2-table",res);
-            }).fail(function() {
-                console.log("faild!")
-            });
+        $.getJSON("https://ipapi.co/json/").done(function(res) {
+            $('#geoip2').html(res.ip);
+            callback_geotable("#geoip2-table",res);
         }).fail(function() {
             $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
         });
