@@ -88,7 +88,7 @@
             });
         }
 
-        $.getJSON("https://ipapi.co/json/").done(function(res) {
+        $.getJSON("http://free.ipwhois.io/json").done(function(res) {
             $('#geoip2').html(res.ip);
             callback_geotable("#geoip2-table",res);
         }).fail(function() {
