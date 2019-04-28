@@ -9,12 +9,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-    $.ajaxSetup({
-        async: false,
-        timeout: 10 * 1000
-    });
-    </script>
+    <script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 </head>
 
 <body>
@@ -36,13 +31,7 @@
                                 <td><img src="images/loading1.gif" /></td>
                             </tr>
                         </table>
-                        <script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
                         <script>
-                            $.get("https://api.ipify.org/").done(function(data) {
-                            $('#geoip1').html("<tr><td>" + returnCitySN['cip'] + "</td></tr>")
-                        }).fail(function() {
-                            $('#geoip1').html("<tr><td>获取IP失败</td></tr>")
-                        });
                         </script>
                         </iframe>
                     </p>
@@ -60,13 +49,6 @@
                                 <td><img src="images/loading2.gif" /></td>
                             </tr>
                         </table>
-                        <script>
-                        $.get("https://api.ipify.org/").done(function(data) {
-                            $('#geoip2').html("<tr><td>" + data + "</td></tr>")
-                        }).fail(function() {
-                            $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
-                        });
-                        </script>
                     </p>
                     <p>您访问没有被封的国外网站所使用的IP</p>
                 </div>
@@ -82,15 +64,6 @@
                                 <td><img src="images/loading3.gif" /></td>
                             </tr>
                         </table>
-                        <script type="text/javascript">
-                        $.getJSON(
-                            "https://my-location-is.appspot.com/callback?callback=?"
-                        ).done(function(data) {
-                            $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>")
-                        }).fail(function() {
-                            $('#geoip3').html("<tr><td>你访问不了谷歌</td></tr>")
-                        });
-                        </script>
                     </p>
                     <p>这是您访问 谷歌 等网站所使用的IP</p>
                 </div>
@@ -108,5 +81,33 @@
         <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101180493ns.gif" /></p>
     </noscript>
 </body>
+<script>
+$(function() {
+    $.ajaxSetup({
+        async: false,
+        timeout: 10 * 1000
+    });
+
+    $.get("https://api.ipify.org/").done(function(data) {
+        $('#geoip1').html("<tr><td>" + returnCitySN['cip'] + "</td></tr>")
+    }).fail(function() {
+        $('#geoip1').html("<tr><td>获取IP失败</td></tr>")
+    });
+
+    $.get("https://api.ipify.org/").done(function(data) {
+        $('#geoip2').html("<tr><td>" + data + "</td></tr>")
+    }).fail(function() {
+        $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
+    });
+
+    $.getJSON(
+        "https://my-location-is.appspot.com/callback?callback=?"
+    ).done(function(data) {
+        $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>")
+    }).fail(function() {
+        $('#geoip3').html("<tr><td>你访问不了谷歌</td></tr>")
+    });
+});
+</script>
 
 </html>
