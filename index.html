@@ -90,6 +90,7 @@ $(function() {
     if(returnCitySN){
         $('#geoip1').html("<tr><td>" + returnCitySN['cip'] + "</td></tr>")
     }
+
     $.get("https://api.ipify.org/").done(function(data) {
         $('#geoip2').html("<tr><td>" + data + "</td></tr>")
     }).fail(function() {
@@ -97,7 +98,7 @@ $(function() {
     });
 
     $.getJSON(
-        "https://my-location-is.appspot.com/callback?callback=?"
+        "http://my-location-is.appspot.com/callback?callback=?"
     ).done(function(data) {
         $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>")
     }).fail(function() {
