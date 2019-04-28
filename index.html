@@ -24,17 +24,14 @@
                     从国内测试
                 </div>
                 <div class="card-body">
-                    <p>
-                        <table id="geoip1" align="center">
-                            <tr>
-                                <td><img src="images/loading2.gif" /></td>
-                            </tr>
-                        </table>
-                        <script>
-                        </script>
-                        </iframe>
-                    </p>
+                    <p><span id="geoip1" class="h2 mb-0">
+                            <img src="images/loading2.gif" />
+                        </span></p>
                     <p>这是您访问国内网站所使用的IP</p>
+                    <table class="table table-sm table-nowrap card-table">
+                        <tbody id="geoip1-table" class="list">    
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="card mb-4 shadow-sm">
@@ -42,14 +39,14 @@
                     从国外测试
                 </div>
                 <div class="card-body">
-                    <p>
-                        <table id="geoip2" align="center">
-                            <tr>
-                                <td><img src="images/loading2.gif" /></td>
-                            </tr>
-                        </table>
-                    </p>
+                    <p><span id="geoip2" class="h2 mb-0">
+                            <img src="images/loading2.gif" />
+                        </span></p>
                     <p>您访问没有被封的国外网站所使用的IP</p>
+                    <table class="table table-sm table-nowrap card-table">
+                        <tbody id="geoip2-table" class="list">    
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="card mb-4 shadow-sm">
@@ -57,14 +54,14 @@
                     从谷歌测试
                 </div>
                 <div class="card-body">
-                    <p>
-                        <table id="geoip3" align="center" class="card-text">
-                            <tr>
-                                <td><img src="images/loading2.gif" /></td>
-                            </tr>
-                        </table>
-                    </p>
+                    <p><span id="geoip3" class="h2 mb-0">
+                            <img src="images/loading2.gif" />
+                        </span></p>
                     <p>这是您访问 谷歌 等网站所使用的IP</p>
+                    <table class="table table-sm table-nowrap card-table">
+                        <tbody id="geoip3-table" class="list">    
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -77,12 +74,27 @@
         $.ajaxSetup({
             timeout: 10000
         });
+
+        function callback_geotable(id, res){
+            $(id).html('<tr><td class="text-right" width="60">country:</td><td class="text-left">'+res.country_name+'</td></tr><tr><td class="text-right">city:</td><td class="text-left">'+res.city+'</td></tr><tr><td class="text-right">asn:</td><td class="text-left">'+res.asn+'</td></tr><tr><td class="text-right">org:</td><td class="text-left">'+res.org+'</td></tr>');
+        }
+
         if (returnCitySN) {
-            $('#geoip1').html("<tr><td>" + returnCitySN['cip'] + "</td></tr>")
+            $('#geoip1').html(returnCitySN['cip']);
+            $.getJSON("https://ipapi.co/"+returnCitySN['cip']+"/json/").done(function(res) {
+                callback_geotable("#geoip1-table",res);
+            }).fail(function() {
+                console.log("faild!")
+            });
         }
 
         $.get("http://api.ipify.org/").done(function(data) {
-            $('#geoip2').html("<tr><td>" + data + "</td></tr>")
+            $('#geoip2').html(data);
+            $.getJSON("https://ipapi.co/"+data+"/json/").done(function(res) {
+                callback_geotable("#geoip2-table",res);
+            }).fail(function() {
+                console.log("faild!")
+            });
         }).fail(function() {
             $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
         });
@@ -90,9 +102,14 @@
         $.getJSON(
             "http://my-location-is.appspot.com/callback?callback=?"
         ).done(function(data) {
-            $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>")
+            $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>");
+            $.getJSON("https://ipapi.co/"+data.ip+"/json/").done(function(res) {
+                callback_geotable("#geoip3-table",res);
+            }).fail(function() {
+                console.log("faild!")
+            });
         }).fail(function() {
-            $('#geoip3').html("<tr><td>你访问不了谷歌</td></tr>")
+            $('#geoip3').html("<tr><td>你访问不了谷歌</td></tr>");
         });
     });
     var clicky_site_ids = clicky_site_ids || [];
