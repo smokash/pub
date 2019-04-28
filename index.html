@@ -38,8 +38,10 @@
                         </table>
                         <script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
                         <script>
-                        $.get("https://api.ipify.org/", function(data) {
+                            $.get("https://api.ipify.org/").done(function(data) {
                             $('#geoip1').html("<tr><td>" + returnCitySN['cip'] + "</td></tr>")
+                        }).fail(function() {
+                            $('#geoip1').html("<tr><td>获取IP失败</td></tr>")
                         });
                         </script>
                         </iframe>
