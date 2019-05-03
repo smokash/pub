@@ -1,4 +1,4 @@
-# May/03/2019 04:31:17 by chnrouters
+# May/04/2019 04:31:20 by chnrouters
 #
 /ip firewall address-list
 remove [find list =novpn ]
@@ -2300,7 +2300,6 @@ add address=103.48.144.0/22 list=novpn
 add address=103.48.148.0/22 list=novpn
 add address=103.48.152.0/22 list=novpn
 add address=103.48.156.0/22 list=tel
-add address=103.48.20.0/22 list=novpn
 add address=103.48.202.0/23 list=novpn
 add address=103.48.216.0/22 list=novpn
 add address=103.48.220.0/22 list=novpn
@@ -6926,7 +6925,6 @@ add address=43.229.120.0/22 list=novpn
 add address=43.229.136.0/22 list=novpn
 add address=43.229.140.0/22 list=novpn
 add address=43.229.144.0/22 list=tel
-add address=43.229.16.0/22 list=novpn
 add address=43.229.168.0/22 list=novpn
 add address=43.229.172.0/22 list=novpn
 add address=43.229.176.0/22 list=novpn
