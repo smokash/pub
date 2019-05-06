@@ -1,4 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -13,7 +14,8 @@
 
 <body>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-        <h5 class="my-0 mr-md-auto font-weight-normal">翻墙线路 - <span id="currentip" class="badge badge-secondary">0.0.0.0</span></h5>
+        <h5 class="my-0 mr-md-auto font-weight-normal">翻墙线路 - <span id="currentip"
+                class="badge badge-secondary">0.0.0.0</span></h5>
     </div>
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     </div>
@@ -29,7 +31,7 @@
                         </span></p>
                     <p>这是您访问国内网站所使用的IP</p>
                     <table class="table table-sm table-nowrap card-table">
-                        <tbody id="geoip1-table" class="list">    
+                        <tbody id="geoip1-table" class="list">
                         </tbody>
                     </table>
                 </div>
@@ -44,7 +46,7 @@
                         </span></p>
                     <p>您访问没有被封的国外网站所使用的IP</p>
                     <table class="table table-sm table-nowrap card-table">
-                        <tbody id="geoip2-table" class="list">    
+                        <tbody id="geoip2-table" class="list">
                         </tbody>
                     </table>
                 </div>
@@ -59,7 +61,7 @@
                         </span></p>
                     <p>这是您访问 谷歌 等网站所使用的IP</p>
                     <table class="table table-sm table-nowrap card-table">
-                        <tbody id="geoip3-table" class="list">    
+                        <tbody id="geoip3-table" class="list">
                         </tbody>
                     </table>
                 </div>
@@ -70,50 +72,50 @@
     </div>
     <script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
     <script>
-    $(function() {
-        $.ajaxSetup({
-            timeout: 10000
-        });
-
-        $.get("/ip.php").done(function(res) {
-            $('#currentip').html(res);
-        });
-
-        function callback_geotable(id, res){
-            $(id).html('<tr><td class="text-right" width="60">地区:</td><td class="text-left"><img src="'+res.country_flag+'" width=23/> '+res.region+'</td></tr><tr><td class="text-right">ASN:</td><td class="text-left">'+res.asn+'</td></tr><tr><td class="text-right">ISP:</td><td class="text-left">'+res.org+'</td></tr>');
-        }
-
-        if (returnCitySN) {
-            $('#geoip1').html(returnCitySN['cip']);
-            $.getJSON("http://free.ipwhois.io/json/"+returnCitySN['cip']+"?lang=zh-CN").done(function(res) {
-                callback_geotable("#geoip1-table",res);
-            }).fail(function() {
-                console.log("faild!")
+        $(function () {
+            $.ajaxSetup({
+                timeout: 10000
             });
-        }
 
-        $.getJSON("http://free.ipwhois.io/json/?lang=zh-CN").done(function(res) {
-            $('#geoip2').html(res.ip);
-            callback_geotable("#geoip2-table",res);
-        }).fail(function() {
-            $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
-        });
-
-        $.getJSON(
-            "http://my-location-is.appspot.com/callback?callback=?"
-        ).done(function(data) {
-            $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>");
-            $.getJSON("http://free.ipwhois.io/json/"+data.ip+"?lang=zh-CN").done(function(res) {
-                callback_geotable("#geoip3-table",res);
-            }).fail(function() {
-                console.log("faild!")
+            $.get("/ip.php").done(function (res) {
+                $('#currentip').html(res);
             });
-        }).fail(function() {
-            $('#geoip3').html("<tr><td>你访问不了谷歌</td></tr>");
+
+            function callback_geotable(id, res) {
+                $(id).html('<tr><td class="text-right" width="60">地区:</td><td class="text-left"><img src="' + res.country_flag + '" width=23/> ' + res.region + '</td></tr><tr><td class="text-right">ASN:</td><td class="text-left">' + res.asn + '</td></tr><tr><td class="text-right">ISP:</td><td class="text-left">' + res.org + '</td></tr>');
+            }
+
+            if (returnCitySN) {
+                $('#geoip1').html(returnCitySN['cip']);
+                $.getJSON("http://free.ipwhois.io/json/" + returnCitySN['cip'] + "?lang=zh-CN").done(function (res) {
+                    callback_geotable("#geoip1-table", res);
+                }).fail(function () {
+                    console.log("faild!")
+                });
+            }
+
+            $.getJSON("http://free.ipwhois.io/json/?lang=zh-CN").done(function (res) {
+                $('#geoip2').html(res.ip);
+                callback_geotable("#geoip2-table", res);
+            }).fail(function () {
+                $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
+            });
+
+            $.getJSON(
+                "http://my-location-is.appspot.com/callback?callback=?"
+            ).done(function (data) {
+                $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>");
+                $.getJSON("http://free.ipwhois.io/json/" + data.ip + "?lang=zh-CN").done(function (res) {
+                    callback_geotable("#geoip3-table", res);
+                }).fail(function () {
+                    console.log("faild!")
+                });
+            }).fail(function () {
+                $('#geoip3').html("<tr><td>你访问不了谷歌</td></tr>");
+            });
         });
-    });
-    var clicky_site_ids = clicky_site_ids || [];
-    clicky_site_ids.push(101180493);
+        var clicky_site_ids = clicky_site_ids || [];
+        clicky_site_ids.push(101180493);
     </script>
     <script async src="http://static.getclicky.com/js"></script>
     <noscript>
