@@ -1,4 +1,4 @@
-# Jul/18/2019 04:31:23 by chnrouters
+# Jul/19/2019 04:31:25 by chnrouters
 #
 /ipv6 route
 remove [find comment=tel]
