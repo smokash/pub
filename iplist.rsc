@@ -1,4 +1,4 @@
-# Aug/02/2019 04:31:22 by chnrouters
+# Aug/03/2019 04:31:20 by chnrouters
 #
 /ip firewall address-list
 remove [find list =novpn ]
