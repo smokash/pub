@@ -114,13 +114,16 @@
                 $('#geoip3').html("<tr><td>你访问不了谷歌</td></tr>");
             });
         });
-        var clicky_site_ids = clicky_site_ids || [];
-        clicky_site_ids.push(101180493);
     </script>
-    <script async src="http://static.getclicky.com/js"></script>
-    <noscript>
-        <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101180493ns.gif" /></p>
-    </noscript>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145818142-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-145818142-1');
+    </script>
 </body>
 
 </html>
