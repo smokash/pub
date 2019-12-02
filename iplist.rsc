@@ -1,4 +1,4 @@
-# Dec/02/2019 04:31:29 by chnrouters
+# Dec/03/2019 04:31:22 by chnrouters
 #
 /ip firewall address-list
 remove [find list =novpn ]
@@ -562,7 +562,7 @@ add address=103.138.208.0/23 list=novpn
 add address=103.138.220.0/23 list=novpn
 add address=103.138.246.0/23 list=novpn
 add address=103.138.248.0/23 list=novpn
-add address=103.138.80.0/22 list=novpn
+add address=103.138.80.0/22 list=tel
 add address=103.139.0.0/23 list=novpn
 add address=103.139.113.0/24 list=novpn
 add address=103.139.134.0/23 list=novpn
@@ -654,6 +654,7 @@ add address=103.145.86.0/23 list=novpn
 add address=103.145.92.0/23 list=novpn
 add address=103.145.94.0/23 list=novpn
 add address=103.145.98.0/23 list=novpn
+add address=103.146.6.0/23 list=novpn
 add address=103.15.16.0/22 list=novpn
 add address=103.15.200.0/22 list=novpn
 add address=103.15.4.0/22 list=novpn
@@ -3249,8 +3250,9 @@ add address=106.0.8.0/21 list=tel
 add address=106.108.0.0/14 list=tel
 add address=106.11.0.0/16 list=novpn
 add address=106.112.0.0/13 list=tel
-add address=106.12.0.0/14 list=novpn
+add address=106.12.0.0/15 list=novpn
 add address=106.120.0.0/13 list=tel
+add address=106.14.0.0/15 list=novpn
 add address=106.16.0.0/12 list=tel
 add address=106.2.0.0/15 list=novpn
 add address=106.224.0.0/12 list=tel
@@ -3603,7 +3605,10 @@ add address=117.24.0.0/13 list=tel
 add address=117.32.0.0/13 list=tel
 add address=117.40.0.0/14 list=tel
 add address=117.44.0.0/15 list=tel
-add address=117.48.0.0/14 list=novpn
+add address=117.48.0.0/17 list=novpn
+add address=117.48.128.0/17 list=novpn
+add address=117.49.0.0/16 list=novpn
+add address=117.50.0.0/15 list=novpn
 add address=117.53.176.0/20 list=novpn
 add address=117.53.48.0/20 list=novpn
 add address=117.57.0.0/16 list=tel
@@ -7614,8 +7619,7 @@ add address=43.255.84.0/22 list=novpn
 add address=43.255.96.0/22 list=novpn
 add address=45.112.132.0/22 list=novpn
 add address=45.112.188.0/22 list=novpn
-add address=45.112.208.0/22 list=novpn
-add address=45.112.212.0/22 list=novpn
+add address=45.112.208.0/21 list=novpn
 add address=45.112.216.0/22 list=novpn
 add address=45.112.220.0/22 list=novpn
 add address=45.112.228.0/22 list=novpn
