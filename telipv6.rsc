@@ -1,4 +1,4 @@
-# Dec/17/2019 04:31:25 by chnrouters
+# Dec/18/2019 04:31:26 by chnrouters
 #
 /ipv6 route
 remove [find comment=tel]
@@ -45,6 +45,7 @@ add distance=1 dst-address=2404:158::/32 gateway=pppoe-out2 comment=tel
 add distance=1 dst-address=2404:3700::/32 gateway=pppoe-out2 comment=tel
 add distance=1 dst-address=2404:3b00::/32 gateway=pppoe-out2 comment=tel
 add distance=1 dst-address=2404:a180::/32 gateway=pppoe-out2 comment=tel
+add distance=1 dst-address=2405:9bc0::/32 gateway=pppoe-out2 comment=tel
 add distance=1 dst-address=2405:b300::/32 gateway=pppoe-out2 comment=tel
 add distance=1 dst-address=2406:cd80::/32 gateway=pppoe-out2 comment=tel
 add distance=1 dst-address=2406:ce80::/32 gateway=pppoe-out2 comment=tel
