@@ -1,4 +1,4 @@
-# Dec/31/2019 04:31:20 by chnrouters
+# Jan/01/2020 04:31:26 by chnrouters
 #
 /ip firewall address-list
 remove [find list =novpn ]
@@ -7698,7 +7698,6 @@ add address=45.115.244.0/22 list=novpn
 add address=45.115.248.0/22 list=novpn
 add address=45.115.44.0/22 list=novpn
 add address=45.116.100.0/22 list=novpn
-add address=45.116.12.0/22 list=novpn
 add address=45.116.140.0/22 list=novpn
 add address=45.116.152.0/22 list=novpn
 add address=45.116.16.0/22 list=novpn
