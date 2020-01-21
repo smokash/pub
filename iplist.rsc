@@ -1,4 +1,4 @@
-# Jan/21/2020 04:31:23 by chnrouters
+# Jan/22/2020 04:31:26 by chnrouters
 #
 /ip firewall address-list
 remove [find list =novpn ]
@@ -669,6 +669,7 @@ add address=103.147.12.0/23 list=novpn
 add address=103.147.124.0/23 list=novpn
 add address=103.147.198.0/23 list=novpn
 add address=103.147.206.0/23 list=novpn
+add address=103.147.211.0/24 list=novpn
 add address=103.15.16.0/22 list=novpn
 add address=103.15.200.0/22 list=novpn
 add address=103.15.4.0/22 list=novpn
@@ -3439,8 +3440,8 @@ add address=113.8.0.0/15 list=novpn
 add address=113.96.0.0/12 list=tel
 add address=114.104.0.0/14 list=tel
 add address=114.110.0.0/20 list=novpn
-add address=114.110.64.0/18 list=tel
-add address=114.111.0.0/19 list=tel
+add address=114.110.64.0/18 list=novpn
+add address=114.111.0.0/19 list=novpn
 add address=114.111.160.0/19 list=novpn
 add address=114.112.0.0/14 list=novpn
 add address=114.116.0.0/16 list=novpn
@@ -3937,7 +3938,7 @@ add address=122.204.0.0/14 list=novpn
 add address=122.224.0.0/12 list=tel
 add address=122.240.0.0/13 list=tel
 add address=122.248.24.0/21 list=tel
-add address=122.248.48.0/20 list=tel
+add address=122.248.48.0/20 list=novpn
 add address=122.255.64.0/21 list=tel
 add address=122.4.0.0/14 list=tel
 add address=122.48.0.0/16 list=novpn
@@ -4074,7 +4075,8 @@ add address=124.6.64.0/18 list=tel
 add address=124.64.0.0/15 list=novpn
 add address=124.66.0.0/17 list=novpn
 add address=124.67.0.0/16 list=novpn
-add address=124.68.0.0/14 list=novpn
+add address=124.68.0.0/15 list=novpn
+add address=124.70.0.0/15 list=novpn
 add address=124.72.0.0/16 list=tel
 add address=124.73.0.0/16 list=tel
 add address=124.74.0.0/15 list=tel
@@ -4868,7 +4870,7 @@ add address=202.179.172.0/22 list=novpn
 add address=202.179.240.0/20 list=novpn
 add address=202.180.128.0/19 list=novpn
 add address=202.180.208.0/21 list=tel
-add address=202.181.112.0/20 list=tel
+add address=202.181.112.0/20 list=novpn
 add address=202.181.28.0/22 list=novpn
 add address=202.181.8.0/22 list=novpn
 add address=202.182.192.0/19 list=tel
