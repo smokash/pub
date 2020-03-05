@@ -1,17 +1,21 @@
-# Mar/05/2020 14:00:53 by chnrouters
+# Mar/05/2020 14:14:20 by chnrouters
 #
 /ip firewall address-list
 remove [find list =chnroute_other ]
 remove [find list =chnroute_tel ]
-add address=101.134.128.0/19 list=chnroute_other
-add address=103.76.216.0/21 list=chnroute_other
-add address=124.119.247.0/24 list=chnroute_other
-add address=180.76.244.0/22 list=chnroute_other
-add address=203.5.118.0/24 list=chnroute_other
-add address=42.247.16.0/20 list=chnroute_other
-add address=43.243.156.0/22 list=chnroute_other
-add address=45.250.96.0/22 list=chnroute_other
-add address=45.252.32.0/20 list=chnroute_other
+add address=101.132.0.0/15 list=chnroute_other
+add address=103.216.152.0/22 list=chnroute_other
+add address=103.220.92.0/22 list=chnroute_other
+add address=118.239.0.0/16 list=chnroute_other
+add address=119.27.128.0/17 list=chnroute_other
+add address=123.253.240.0/22 list=chnroute_other
+add address=139.5.160.0/22 list=chnroute_other
+add address=198.208.19.0/24 list=chnroute_other
+add address=202.124.16.0/21 list=chnroute_other
+add address=202.150.192.0/20 list=chnroute_other
+add address=203.1.253.0/24 list=chnroute_other
+add address=42.157.64.0/18 list=chnroute_other
+add address=43.231.32.0/20 list=chnroute_other
 add address=1.0.1.0/24 list=chnroute_tel
 add address=1.0.2.0/23 list=chnroute_tel
 add address=1.0.32.0/19 list=chnroute_tel
@@ -333,7 +337,6 @@ add address=118.180.0.0/14 list=chnroute_tel
 add address=118.196.0.0/14 list=chnroute_tel
 add address=118.204.0.0/14 list=chnroute_tel
 add address=118.215.192.0/18 list=chnroute_tel
-add address=118.239.0.0/16 list=chnroute_tel
 add address=118.244.0.0/14 list=chnroute_tel
 add address=118.248.0.0/13 list=chnroute_tel
 add address=118.84.0.0/15 list=chnroute_tel
@@ -350,7 +353,6 @@ add address=119.162.0.0/15 list=chnroute_tel
 add address=119.164.0.0/14 list=chnroute_tel
 add address=119.232.0.0/15 list=chnroute_tel
 add address=119.252.96.0/21 list=chnroute_tel
-add address=119.27.128.0/17 list=chnroute_tel
 add address=119.27.64.0/18 list=chnroute_tel
 add address=119.30.48.0/20 list=chnroute_tel
 add address=119.40.0.0/18 list=chnroute_tel
@@ -425,6 +427,7 @@ add address=124.119.246.224/28 list=chnroute_tel
 add address=124.119.246.240/29 list=chnroute_tel
 add address=124.119.246.248/30 list=chnroute_tel
 add address=124.119.246.254/31 list=chnroute_tel
+add address=124.119.247.0/24 list=chnroute_tel
 add address=124.119.248.0/21 list=chnroute_tel
 add address=124.126.0.0/15 list=chnroute_tel
 add address=124.14.0.0/15 list=chnroute_tel
@@ -540,7 +543,6 @@ add address=202.12.84.0/23 list=chnroute_tel
 add address=202.12.96.0/24 list=chnroute_tel
 add address=202.12.98.0/23 list=chnroute_tel
 add address=202.122.132.0/24 list=chnroute_tel
-add address=202.124.16.0/21 list=chnroute_tel
 add address=202.124.24.0/22 list=chnroute_tel
 add address=202.125.107.0/24 list=chnroute_tel
 add address=202.125.112.0/20 list=chnroute_tel
@@ -600,7 +602,6 @@ add address=202.147.144.0/20 list=chnroute_tel
 add address=202.148.32.0/20 list=chnroute_tel
 add address=202.148.64.0/18 list=chnroute_tel
 add address=202.149.32.0/19 list=chnroute_tel
-add address=202.150.192.0/20 list=chnroute_tel
 add address=202.150.224.0/19 list=chnroute_tel
 add address=202.150.32.0/20 list=chnroute_tel
 add address=202.150.56.0/22 list=chnroute_tel
@@ -805,7 +806,6 @@ add address=203.0.96.0/23 list=chnroute_tel
 add address=203.1.100.0/22 list=chnroute_tel
 add address=203.1.108.0/24 list=chnroute_tel
 add address=203.1.18.0/24 list=chnroute_tel
-add address=203.1.253.0/24 list=chnroute_tel
 add address=203.1.254.0/24 list=chnroute_tel
 add address=203.1.26.0/23 list=chnroute_tel
 add address=203.1.4.0/22 list=chnroute_tel
@@ -1449,6 +1449,7 @@ add address=203.4.227.0/24 list=chnroute_tel
 add address=203.4.230.0/23 list=chnroute_tel
 add address=203.5.11.0/24 list=chnroute_tel
 add address=203.5.114.0/23 list=chnroute_tel
+add address=203.5.118.0/24 list=chnroute_tel
 add address=203.5.120.0/24 list=chnroute_tel
 add address=203.5.172.0/24 list=chnroute_tel
 add address=203.5.180.0/23 list=chnroute_tel
@@ -1863,6 +1864,7 @@ add address=45.250.144.0/21 list=chnroute_tel
 add address=45.250.16.0/22 list=chnroute_tel
 add address=45.250.76.0/22 list=chnroute_tel
 add address=45.250.80.0/20 list=chnroute_tel
+add address=45.250.96.0/22 list=chnroute_tel
 add address=45.252.192.0/19 list=chnroute_tel
 add address=45.253.120.0/22 list=chnroute_tel
 add address=46.248.24.0/23 list=chnroute_tel
