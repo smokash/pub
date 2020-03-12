@@ -82,7 +82,7 @@
             });
 
             function callback_geotable(id, res) {
-                $(id).html('<tr><td class="text-right" width="65">地区:</td><td class="text-left" nowrap><img src="https://cdn.ipwhois.io/flags/' + res.countryCode.toLowerCase() + '.svg" width=23/> ' + res.country + ' ' + res.regionName + ' ' + res.city + '</td></tr><tr><td class="text-right">ASN:</td><td class="text-left" nowrap>' + res.as + '</td></tr><tr><td class="text-right">ISP:</td><td class="text-left" nowrap>' + res.isp + '</td></tr>');
+                $(id).html('<tr><td class="text-right" width="60">地区:</td><td class="text-left"><img src="https://cdn.ipwhois.io/flags/' + res.countryCode.toLowerCase() + '.svg" width=23/> ' + res.country + ' ' + res.regionName + ' ' + res.city + '</td></tr><tr><td class="text-right">运营商:</td><td class="text-left">' + res.org + '</td></tr><tr><td class="text-right">ISP:</td><td class="text-left">' + res.isp + '</td></tr>');
             }
 
             if (returnCitySN) {
