@@ -82,20 +82,20 @@
             });
 
             function callback_geotable(id, res) {
-                $(id).html('<tr><td class="text-right" width="60">地区:</td><td class="text-left"><img src="' + res.country_flag + '" width=23/> ' + res.region + '</td></tr><tr><td class="text-right">ASN:</td><td class="text-left">' + res.asn + '</td></tr><tr><td class="text-right">ISP:</td><td class="text-left">' + res.org + '</td></tr>');
+                $(id).html('<tr><td class="text-right" width="60">地区:</td><td class="text-left"><img src="https://cdn.ipwhois.io/flags/' + res.countryCode.toLowerCase() + '.svg" width=23/> ' + res.country + ' ' + res.regionName + ' ' + res.city '</td></tr><tr><td class="text-right">ASN:</td><td class="text-left">' + res.as + '</td></tr><tr><td class="text-right">ISP:</td><td class="text-left">' + res.isp + '</td></tr>');
             }
 
             if (returnCitySN) {
                 $('#geoip1').html(returnCitySN['cip']);
-                $.getJSON("http://free.ipwhois.io/json/" + returnCitySN['cip'] + "?lang=zh-CN").done(function (res) {
+                $.getJSON("http://ip-api.com/json/" + returnCitySN['cip'] + "?lang=zh-CN").done(function (res) {
                     callback_geotable("#geoip1-table", res);
                 }).fail(function () {
                     console.log("faild!")
                 });
             }
 
-            $.getJSON("http://free.ipwhois.io/json/?lang=zh-CN").done(function (res) {
-                $('#geoip2').html(res.ip);
+            $.getJSON("http://ip-api.com/json/?lang=zh-CN").done(function (res) {
+                $('#geoip2').html(res.query);
                 callback_geotable("#geoip2-table", res);
             }).fail(function () {
                 $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
@@ -105,7 +105,7 @@
                 "http://my-location-is.appspot.com/callback?callback=?"
             ).done(function (data) {
                 $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>");
-                $.getJSON("http://free.ipwhois.io/json/" + data.ip + "?lang=zh-CN").done(function (res) {
+                $.getJSON("http://ip-api.com/json/" + data.ip + "?lang=zh-CN").done(function (res) {
                     callback_geotable("#geoip3-table", res);
                 }).fail(function () {
                     console.log("faild!")
