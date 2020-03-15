@@ -1,4 +1,4 @@
-# Mar/15/2020 21:38:50 by chnrouters
+# Mar/15/2020 22:01:50 by chnrouters
 #
 /ip firewall address-list
 remove [find list=chnroute_cnc ]
@@ -87,7 +87,6 @@ add address=43.243.228.0/22 list=chnroute_cnc
 add address=43.243.244.0/22 list=chnroute_cnc
 add address=43.246.228.0/23 list=chnroute_cnc
 add address=43.247.4.0/22 list=chnroute_cnc
-add address=43.247.88.0/21 list=chnroute_cnc
 add address=43.247.100.0/23 list=chnroute_cnc
 add address=43.247.184.0/21 list=chnroute_cnc
 add address=43.248.20.0/22 list=chnroute_cnc
@@ -117,11 +116,12 @@ add address=43.254.8.0/22 list=chnroute_cnc
 add address=43.254.24.0/24 list=chnroute_cnc
 add address=43.254.44.0/22 list=chnroute_cnc
 add address=43.254.100.0/22 list=chnroute_cnc
-add address=43.254.104.0/22 list=chnroute_cnc
+add address=43.254.104.0/23 list=chnroute_cnc
+add address=43.254.106.0/24 list=chnroute_cnc
 add address=43.254.116.0/22 list=chnroute_cnc
 add address=43.254.128.0/22 list=chnroute_cnc
-add address=43.254.136.0/21 list=chnroute_cnc
-add address=43.254.144.0/20 list=chnroute_cnc
+add address=43.254.136.0/22 list=chnroute_cnc
+add address=43.254.144.0/21 list=chnroute_cnc
 add address=43.254.168.0/22 list=chnroute_cnc
 add address=43.254.192.0/22 list=chnroute_cnc
 add address=43.254.220.0/22 list=chnroute_cnc
@@ -133,17 +133,13 @@ add address=45.113.240.0/23 list=chnroute_cnc
 add address=45.113.252.0/22 list=chnroute_cnc
 add address=45.115.144.0/22 list=chnroute_cnc
 add address=45.115.164.0/22 list=chnroute_cnc
-add address=45.115.200.0/22 list=chnroute_cnc
-add address=45.119.64.0/21 list=chnroute_cnc
+add address=45.119.68.0/22 list=chnroute_cnc
 add address=45.120.100.0/22 list=chnroute_cnc
 add address=45.121.52.0/22 list=chnroute_cnc
-add address=45.124.20.0/22 list=chnroute_cnc
 add address=45.124.80.0/22 list=chnroute_cnc
 add address=45.125.44.0/22 list=chnroute_cnc
-add address=45.248.96.0/20 list=chnroute_cnc
 add address=45.249.212.0/22 list=chnroute_cnc
 add address=45.250.32.0/21 list=chnroute_cnc
-add address=45.251.84.0/22 list=chnroute_cnc
 add address=45.251.88.0/21 list=chnroute_cnc
 add address=45.252.104.0/22 list=chnroute_cnc
 add address=45.253.24.0/22 list=chnroute_cnc
@@ -165,7 +161,27 @@ add address=58.68.180.0/24 list=chnroute_cnc
 add address=58.83.17.0/24 list=chnroute_cnc
 add address=58.144.0.0/16 list=chnroute_cnc
 add address=58.240.0.0/12 list=chnroute_cnc
-add address=59.80.0.0/15 list=chnroute_cnc
+add address=59.80.0.0/16 list=chnroute_cnc
+add address=59.81.8.0/23 list=chnroute_cnc
+add address=59.81.12.0/23 list=chnroute_cnc
+add address=59.81.16.0/23 list=chnroute_cnc
+add address=59.81.20.0/23 list=chnroute_cnc
+add address=59.81.24.0/23 list=chnroute_cnc
+add address=59.81.32.0/23 list=chnroute_cnc
+add address=59.81.36.0/23 list=chnroute_cnc
+add address=59.81.40.0/23 list=chnroute_cnc
+add address=59.81.46.0/24 list=chnroute_cnc
+add address=59.81.64.0/23 list=chnroute_cnc
+add address=59.81.68.0/23 list=chnroute_cnc
+add address=59.81.72.0/23 list=chnroute_cnc
+add address=59.81.76.0/22 list=chnroute_cnc
+add address=59.81.80.0/22 list=chnroute_cnc
+add address=59.81.86.0/23 list=chnroute_cnc
+add address=59.81.88.0/23 list=chnroute_cnc
+add address=59.81.92.0/22 list=chnroute_cnc
+add address=59.81.98.0/23 list=chnroute_cnc
+add address=59.81.100.0/22 list=chnroute_cnc
+add address=59.81.104.0/22 list=chnroute_cnc
 add address=59.83.192.0/18 list=chnroute_cnc
 add address=60.0.0.0/11 list=chnroute_cnc
 add address=60.194.0.0/15 list=chnroute_cnc
@@ -246,7 +262,6 @@ add address=103.22.188.0/22 list=chnroute_cnc
 add address=103.24.228.0/22 list=chnroute_cnc
 add address=103.25.20.0/22 list=chnroute_cnc
 add address=103.25.24.0/22 list=chnroute_cnc
-add address=103.25.40.0/22 list=chnroute_cnc
 add address=103.26.0.0/22 list=chnroute_cnc
 add address=103.26.64.0/22 list=chnroute_cnc
 add address=103.27.24.0/22 list=chnroute_cnc
@@ -260,13 +275,12 @@ add address=103.36.28.0/22 list=chnroute_cnc
 add address=103.36.174.0/23 list=chnroute_cnc
 add address=103.36.208.0/22 list=chnroute_cnc
 add address=103.36.220.0/23 list=chnroute_cnc
-add address=103.37.44.0/22 list=chnroute_cnc
 add address=103.37.72.0/22 list=chnroute_cnc
 add address=103.37.136.0/21 list=chnroute_cnc
 add address=103.37.144.0/20 list=chnroute_cnc
 add address=103.37.160.0/21 list=chnroute_cnc
 add address=103.38.32.0/22 list=chnroute_cnc
-add address=103.38.40.0/21 list=chnroute_cnc
+add address=103.38.40.0/22 list=chnroute_cnc
 add address=103.38.224.0/22 list=chnroute_cnc
 add address=103.38.232.0/22 list=chnroute_cnc
 add address=103.39.88.0/22 list=chnroute_cnc
@@ -278,17 +292,14 @@ add address=103.45.72.0/21 list=chnroute_cnc
 add address=103.47.48.0/22 list=chnroute_cnc
 add address=103.48.232.0/23 list=chnroute_cnc
 add address=103.52.160.0/22 list=chnroute_cnc
-add address=103.52.176.0/22 list=chnroute_cnc
 add address=103.53.204.0/22 list=chnroute_cnc
 add address=103.53.208.0/22 list=chnroute_cnc
 add address=103.55.172.0/22 list=chnroute_cnc
-add address=103.55.228.0/22 list=chnroute_cnc
 add address=103.56.32.0/22 list=chnroute_cnc
 add address=103.56.60.0/22 list=chnroute_cnc
 add address=103.59.124.0/22 list=chnroute_cnc
 add address=103.61.153.0/24 list=chnroute_cnc
 add address=103.61.154.0/23 list=chnroute_cnc
-add address=103.67.192.0/22 list=chnroute_cnc
 add address=103.68.128.0/22 list=chnroute_cnc
 add address=103.72.113.0/24 list=chnroute_cnc
 add address=103.72.172.0/24 list=chnroute_cnc
@@ -305,10 +316,9 @@ add address=103.85.176.0/22 list=chnroute_cnc
 add address=103.90.92.0/22 list=chnroute_cnc
 add address=103.90.176.0/22 list=chnroute_cnc
 add address=103.90.188.0/22 list=chnroute_cnc
-add address=103.91.108.0/22 list=chnroute_cnc
 add address=103.91.176.0/22 list=chnroute_cnc
 add address=103.91.200.0/22 list=chnroute_cnc
-add address=103.91.208.0/21 list=chnroute_cnc
+add address=103.91.208.0/22 list=chnroute_cnc
 add address=103.92.132.0/22 list=chnroute_cnc
 add address=103.93.180.0/22 list=chnroute_cnc
 add address=103.95.220.0/23 list=chnroute_cnc
@@ -342,7 +352,6 @@ add address=103.131.168.0/22 list=chnroute_cnc
 add address=103.135.80.0/23 list=chnroute_cnc
 add address=103.135.160.0/23 list=chnroute_cnc
 add address=103.141.10.0/23 list=chnroute_cnc
-add address=103.142.128.0/23 list=chnroute_cnc
 add address=103.143.228.0/23 list=chnroute_cnc
 add address=103.192.4.0/23 list=chnroute_cnc
 add address=103.192.212.0/22 list=chnroute_cnc
@@ -355,7 +364,6 @@ add address=103.202.120.0/21 list=chnroute_cnc
 add address=103.202.128.0/20 list=chnroute_cnc
 add address=103.202.144.0/22 list=chnroute_cnc
 add address=103.204.72.0/22 list=chnroute_cnc
-add address=103.204.136.0/21 list=chnroute_cnc
 add address=103.205.192.0/22 list=chnroute_cnc
 add address=103.205.252.0/22 list=chnroute_cnc
 add address=103.207.184.0/21 list=chnroute_cnc
@@ -365,16 +373,16 @@ add address=103.211.96.0/22 list=chnroute_cnc
 add address=103.211.220.0/22 list=chnroute_cnc
 add address=103.213.96.0/22 list=chnroute_cnc
 add address=103.214.48.0/22 list=chnroute_cnc
-add address=103.216.240.0/20 list=chnroute_cnc
 add address=103.218.216.0/22 list=chnroute_cnc
 add address=103.219.32.0/21 list=chnroute_cnc
 add address=103.219.64.0/23 list=chnroute_cnc
-add address=103.220.48.0/20 list=chnroute_cnc
+add address=103.220.52.0/22 list=chnroute_cnc
 add address=103.220.164.0/22 list=chnroute_cnc
 add address=103.221.140.0/22 list=chnroute_cnc
 add address=103.222.40.0/22 list=chnroute_cnc
 add address=103.224.228.0/23 list=chnroute_cnc
-add address=103.224.232.0/22 list=chnroute_cnc
+add address=103.224.232.0/24 list=chnroute_cnc
+add address=103.224.234.0/23 list=chnroute_cnc
 add address=103.226.132.0/22 list=chnroute_cnc
 add address=103.227.76.0/22 list=chnroute_cnc
 add address=103.227.80.0/22 list=chnroute_cnc
@@ -384,7 +392,6 @@ add address=103.228.160.0/22 list=chnroute_cnc
 add address=103.228.204.0/23 list=chnroute_cnc
 add address=103.228.228.0/22 list=chnroute_cnc
 add address=103.229.148.0/22 list=chnroute_cnc
-add address=103.229.212.0/22 list=chnroute_cnc
 add address=103.231.16.0/24 list=chnroute_cnc
 add address=103.231.64.0/21 list=chnroute_cnc
 add address=103.231.144.0/22 list=chnroute_cnc
@@ -536,9 +543,7 @@ add address=115.46.0.0/16 list=chnroute_cnc
 add address=115.48.0.0/12 list=chnroute_cnc
 add address=115.85.192.0/18 list=chnroute_cnc
 add address=115.100.0.0/15 list=chnroute_cnc
-add address=115.173.0.0/19 list=chnroute_cnc
-add address=115.174.0.0/18 list=chnroute_cnc
-add address=115.174.64.0/19 list=chnroute_cnc
+add address=115.172.0.0/14 list=chnroute_cnc
 add address=115.182.0.0/20 list=chnroute_cnc
 add address=115.182.48.0/20 list=chnroute_cnc
 add address=115.182.64.0/20 list=chnroute_cnc
@@ -668,7 +673,7 @@ add address=119.253.64.0/19 list=chnroute_cnc
 add address=119.253.128.0/17 list=chnroute_cnc
 add address=119.255.0.0/18 list=chnroute_cnc
 add address=120.0.0.0/12 list=chnroute_cnc
-add address=120.52.0.0/14 list=chnroute_cnc
+add address=120.52.0.0/16 list=chnroute_cnc
 add address=120.65.0.0/16 list=chnroute_cnc
 add address=120.80.0.0/13 list=chnroute_cnc
 add address=120.92.0.0/17 list=chnroute_cnc
@@ -807,9 +812,9 @@ add address=144.48.64.0/22 list=chnroute_cnc
 add address=146.196.68.0/22 list=chnroute_cnc
 add address=150.129.136.0/22 list=chnroute_cnc
 add address=150.129.192.0/22 list=chnroute_cnc
-add address=150.242.8.0/22 list=chnroute_cnc
+add address=150.242.8.0/23 list=chnroute_cnc
 add address=150.242.184.0/22 list=chnroute_cnc
-add address=150.242.232.0/21 list=chnroute_cnc
+add address=150.242.232.0/22 list=chnroute_cnc
 add address=150.255.0.0/16 list=chnroute_cnc
 add address=153.0.0.0/16 list=chnroute_cnc
 add address=153.3.0.0/16 list=chnroute_cnc
@@ -831,7 +836,6 @@ add address=161.207.0.0/16 list=chnroute_cnc
 add address=163.0.0.0/16 list=chnroute_cnc
 add address=163.47.4.0/22 list=chnroute_cnc
 add address=163.53.40.0/22 list=chnroute_cnc
-add address=163.53.48.0/20 list=chnroute_cnc
 add address=163.53.88.0/21 list=chnroute_cnc
 add address=163.53.100.0/22 list=chnroute_cnc
 add address=163.53.112.0/20 list=chnroute_cnc
@@ -879,6 +883,7 @@ add address=180.130.0.0/16 list=chnroute_cnc
 add address=180.150.176.0/20 list=chnroute_cnc
 add address=180.178.252.0/22 list=chnroute_cnc
 add address=180.186.0.0/16 list=chnroute_cnc
+add address=180.189.148.0/22 list=chnroute_cnc
 add address=180.210.236.0/22 list=chnroute_cnc
 add address=180.223.0.0/17 list=chnroute_cnc
 add address=182.18.0.0/21 list=chnroute_cnc
