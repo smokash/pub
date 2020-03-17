@@ -104,7 +104,7 @@
                 $.getJSON(
                     "//api.myip.la/cn?json"
                 ).done(function (data) {
-                    $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>");
+                    $('#geoip2').html("<tr><td>" + data.ip + "</td></tr>");
                     var get_ip_info_url = "/ip.php?ip=" + data.ip;
                     $.getJSON(get_ip_info_url).done(function (res) {
                         callback_geotable("#geoip2-table", res);
