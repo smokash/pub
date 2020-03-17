@@ -74,6 +74,7 @@
     <script type="text/javascript" src="//pv.sohu.com/cityjson?ie=utf-8"></script>
     <script>
         $(function () {
+            var ishttps = 'https:' == document.location.protocol ? true : false;
             $.ajaxSetup({
                 timeout: 10000
             });
@@ -88,25 +89,49 @@
 
             if (returnCitySN) {
                 $('#geoip1').html(returnCitySN['cip']);
-                $.getJSON("//ip-api.com/json/" + returnCitySN['cip'] + "?lang=zh-CN").done(function (res) {
+                var get_ip_info_url = "//ip-api.com/json/" + returnCitySN['cip'] + "?lang=zh-CN";
+                if (ishttps) {
+                    get_ip_info_url = "/ip.php?ip=" + returnCitySN['cip'];
+                }
+                $.getJSON(get_ip_info_url).done(function (res) {
                     callback_geotable("#geoip1-table", res);
                 }).fail(function () {
                     console.log("faild!")
                 });
             }
 
-            $.getJSON("//ip-api.com/json/?lang=zh-CN").done(function (res) {
-                $('#geoip2').html(res.query);
-                callback_geotable("#geoip2-table", res);
-            }).fail(function () {
-                $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
-            });
+            if (ishttps) {
+                $.getJSON(
+                    "//api.myip.la/cn?json"
+                ).done(function (data) {
+                    $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>");
+                    var get_ip_info_url = "/ip.php?ip=" + data.ip;
+                    $.getJSON(get_ip_info_url).done(function (res) {
+                        callback_geotable("#geoip2-table", res);
+                    }).fail(function () {
+                        console.log("faild!")
+                    });
+                }).fail(function () {
+                    $('#geoip2').html("<tr><td>你访问不了国外</td></tr>");
+                });
+            } else {
+                $.getJSON("//ip-api.com/json/?lang=zh-CN").done(function (res) {
+                    $('#geoip2').html(res.query);
+                    callback_geotable("#geoip2-table", res);
+                }).fail(function () {
+                    $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
+                });
+            }
 
             $.getJSON(
                 "//my-location-is.appspot.com/callback?callback=?"
             ).done(function (data) {
                 $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>");
-                $.getJSON("//ip-api.com/json/" + data.ip + "?lang=zh-CN").done(function (res) {
+                var get_ip_info_url = "//ip-api.com/json/" + data.ip + "?lang=zh-CN";
+                if (ishttps) {
+                    get_ip_info_url = "/ip.php?ip=" + data.ip;
+                }
+                $.getJSON(get_ip_info_url).done(function (res) {
                     callback_geotable("#geoip3-table", res);
                 }).fail(function () {
                     console.log("faild!")
