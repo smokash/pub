@@ -95,9 +95,16 @@
                 });
             }
 
-            $.getJSON("//ip-api.com/json/?lang=zh-CN").done(function (res) {
-                $('#geoip2').html(res.query);
-                callback_geotable("#geoip2-table", res);
+            $.getJSON("//api.myip.la/cn?json").done(function (res) {
+                $('#geoip2').html(res.ip);
+                var res_new = new Object();
+                res_new.countryCode = res.country_code;
+                res_new.country = res.country_name;
+                res_new.regionName = res.province;
+                res_new.city = res.city;
+                res_new.org = "";
+                res_new.isp = "";
+                callback_geotable("#geoip2-table", res_new);
             }).fail(function () {
                 $('#geoip2').html("<tr><td>你访问不了国外</td></tr>")
             });
