@@ -18,7 +18,7 @@
         <h5 class="my-0 mr-md-auto font-weight-normal">翻墙线路 - <span id="currentip"
                 class="badge badge-secondary">0.0.0.0</span></h5>
         <h5 class="my-0 mr-md-auto font-weight-normal">流量 - <span id="data_counter"
-                class="badge badge-secondary">0</span>GB</h5>
+                class="badge badge-secondary">0</span></h5>
     </div>
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     </div>
@@ -86,7 +86,7 @@
             });
 
             $.get("//vps-bwh-us.myz.net/api.php?q=data_counter").done(function (res) {
-                $('#data_counter').html(res);
+                $('#data_counter').html(res + 'G');
             });
 
             function callback_geotable(id, res) {
