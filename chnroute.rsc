@@ -1,23 +1,7 @@
-# Mar/23/2020 20:24:47 by chnrouters
+# Mar/24/2020 01:37:39 by chnrouters
 #
 /ip firewall address-list
 remove [find list=chnroute ]
-add address=0.0.0.0/8 list=chnroute
-add address=10.0.0.0/8 list=chnroute
-add address=100.64.0.0/10 list=chnroute
-add address=127.0.0.0/8 list=chnroute
-add address=169.254.0.0/16 list=chnroute
-add address=172.16.0.0/12 list=chnroute
-add address=192.0.0.0/24 list=chnroute
-add address=192.0.2.0/24 list=chnroute
-add address=192.88.99.0/24 list=chnroute
-add address=192.168.0.0/16 list=chnroute
-add address=198.18.0.0/15 list=chnroute
-add address=198.51.100.0/24 list=chnroute
-add address=203.0.113.0/24 list=chnroute
-add address=224.0.0.0/4 list=chnroute
-add address=240.0.0.0/4 list=chnroute
-add address=255.255.255.255 list=chnroute
 add address=1.0.1.0/24 list=chnroute
 add address=1.0.2.0/23 list=chnroute
 add address=1.0.32.0/19 list=chnroute
