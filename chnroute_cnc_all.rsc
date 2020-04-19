@@ -1,4 +1,4 @@
-# Mar/31/2020 03:36:52 by chnrouters
+# Apr/19/2020 03:38:35 by chnrouters
 #
 /ip firewall address-list
 remove [find list=chnroute_cnc ]
@@ -131,7 +131,6 @@ add address=45.113.12.0/22 list=chnroute_cnc
 add address=45.113.24.0/22 list=chnroute_cnc
 add address=45.113.240.0/23 list=chnroute_cnc
 add address=45.113.252.0/22 list=chnroute_cnc
-add address=45.115.144.0/22 list=chnroute_cnc
 add address=45.115.164.0/22 list=chnroute_cnc
 add address=45.119.68.0/22 list=chnroute_cnc
 add address=45.120.100.0/22 list=chnroute_cnc
@@ -234,7 +233,6 @@ add address=101.204.0.0/14 list=chnroute_cnc
 add address=101.232.0.0/15 list=chnroute_cnc
 add address=101.236.0.0/18 list=chnroute_cnc
 add address=101.236.64.0/20 list=chnroute_cnc
-add address=101.236.128.0/17 list=chnroute_cnc
 add address=101.251.144.0/20 list=chnroute_cnc
 add address=101.251.160.0/21 list=chnroute_cnc
 add address=101.251.192.0/18 list=chnroute_cnc
@@ -291,12 +289,10 @@ add address=103.40.212.0/22 list=chnroute_cnc
 add address=103.41.164.0/22 list=chnroute_cnc
 add address=103.43.184.0/22 list=chnroute_cnc
 add address=103.45.72.0/21 list=chnroute_cnc
-add address=103.47.48.0/22 list=chnroute_cnc
 add address=103.48.232.0/23 list=chnroute_cnc
 add address=103.52.160.0/22 list=chnroute_cnc
 add address=103.53.204.0/22 list=chnroute_cnc
 add address=103.53.208.0/22 list=chnroute_cnc
-add address=103.55.172.0/22 list=chnroute_cnc
 add address=103.56.32.0/22 list=chnroute_cnc
 add address=103.56.60.0/22 list=chnroute_cnc
 add address=103.59.124.0/22 list=chnroute_cnc
@@ -343,7 +339,6 @@ add address=103.111.64.0/24 list=chnroute_cnc
 add address=103.116.76.0/23 list=chnroute_cnc
 add address=103.116.79.0/24 list=chnroute_cnc
 add address=103.118.52.0/22 list=chnroute_cnc
-add address=103.120.72.0/24 list=chnroute_cnc
 add address=103.120.224.0/22 list=chnroute_cnc
 add address=103.121.52.0/24 list=chnroute_cnc
 add address=103.121.164.0/23 list=chnroute_cnc
@@ -358,6 +353,7 @@ add address=103.143.228.0/23 list=chnroute_cnc
 add address=103.192.4.0/23 list=chnroute_cnc
 add address=103.192.212.0/22 list=chnroute_cnc
 add address=103.193.188.0/22 list=chnroute_cnc
+add address=103.193.192.0/23 list=chnroute_cnc
 add address=103.198.64.0/22 list=chnroute_cnc
 add address=103.202.92.0/22 list=chnroute_cnc
 add address=103.202.96.0/20 list=chnroute_cnc
@@ -453,6 +449,7 @@ add address=106.2.128.0/19 list=chnroute_cnc
 add address=106.2.160.0/21 list=chnroute_cnc
 add address=106.2.168.0/22 list=chnroute_cnc
 add address=106.3.32.0/20 list=chnroute_cnc
+add address=106.3.96.0/22 list=chnroute_cnc
 add address=106.3.128.0/19 list=chnroute_cnc
 add address=106.3.176.0/20 list=chnroute_cnc
 add address=106.3.208.0/21 list=chnroute_cnc
@@ -460,6 +457,8 @@ add address=106.3.224.0/21 list=chnroute_cnc
 add address=106.3.248.0/21 list=chnroute_cnc
 add address=106.74.0.0/16 list=chnroute_cnc
 add address=106.75.0.0/17 list=chnroute_cnc
+add address=106.75.208.0/20 list=chnroute_cnc
+add address=106.75.224.0/19 list=chnroute_cnc
 add address=110.6.0.0/15 list=chnroute_cnc
 add address=110.16.0.0/14 list=chnroute_cnc
 add address=110.40.0.0/21 list=chnroute_cnc
@@ -493,7 +492,10 @@ add address=112.224.0.0/11 list=chnroute_cnc
 add address=113.0.0.0/13 list=chnroute_cnc
 add address=113.8.0.0/15 list=chnroute_cnc
 add address=113.18.0.0/16 list=chnroute_cnc
+add address=113.21.232.0/24 list=chnroute_cnc
 add address=113.31.32.0/20 list=chnroute_cnc
+add address=113.31.96.0/19 list=chnroute_cnc
+add address=113.31.144.0/20 list=chnroute_cnc
 add address=113.44.0.0/14 list=chnroute_cnc
 add address=113.56.0.0/15 list=chnroute_cnc
 add address=113.58.0.0/16 list=chnroute_cnc
@@ -711,7 +713,6 @@ add address=122.144.136.0/22 list=chnroute_cnc
 add address=122.144.142.0/23 list=chnroute_cnc
 add address=122.144.152.0/23 list=chnroute_cnc
 add address=122.144.166.0/23 list=chnroute_cnc
-add address=122.144.168.0/23 list=chnroute_cnc
 add address=122.144.172.0/23 list=chnroute_cnc
 add address=122.144.192.0/19 list=chnroute_cnc
 add address=122.156.0.0/14 list=chnroute_cnc
