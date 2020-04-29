@@ -80,11 +80,11 @@
                 timeout: 10000
             });
 
-            $.get("//vps-bwh-us.myz.net/ip.php").done(function (res) {
+            $.get("//vps-bwh-us.myz.net/ip.myz").done(function (res) {
                 $('#currentip').html(res);
             });
 
-            $.get("//vps-bwh-us.myz.net/api.php?q=data_counter").done(function (res) {
+            $.get("//vps-bwh-us.myz.net/api.myz?q=data_counter").done(function (res) {
                 $('#data_counter').html(res + 'G');
             });
 
@@ -96,7 +96,7 @@
                 $('#geoip1').html(returnCitySN['cip']);
                 var get_ip_info_url = "//ip-api.com/json/" + returnCitySN['cip'] + "?lang=zh-CN";
                 if (ishttps) {
-                    get_ip_info_url = "//vps-bwh-us.myz.net/ip.php?ip=" + returnCitySN['cip'];
+                    get_ip_info_url = "//vps-bwh-us.myz.net/ip.myz?ip=" + returnCitySN['cip'];
                 }
                 $.getJSON(get_ip_info_url).done(function (res) {
                     callback_geotable("#geoip1-table", res);
@@ -110,7 +110,7 @@
                     "//api.myip.la/cn?json"
                 ).done(function (data) {
                     $('#geoip2').html("<tr><td>" + data.ip + "</td></tr>");
-                    var get_ip_info_url = "//vps-bwh-us.myz.net/ip.php?ip=" + data.ip;
+                    var get_ip_info_url = "//vps-bwh-us.myz.net/ip.myz?ip=" + data.ip;
                     $.getJSON(get_ip_info_url).done(function (res) {
                         callback_geotable("#geoip2-table", res);
                     }).fail(function () {
@@ -134,7 +134,7 @@
                 $('#geoip3').html("<tr><td>" + data.ip + "</td></tr>");
                 var get_ip_info_url = "//ip-api.com/json/" + data.ip + "?lang=zh-CN";
                 if (ishttps) {
-                    get_ip_info_url = "//vps-bwh-us.myz.net/ip.php?ip=" + data.ip;
+                    get_ip_info_url = "//vps-bwh-us.myz.net/ip.myz?ip=" + data.ip;
                 }
                 $.getJSON(get_ip_info_url).done(function (res) {
                     callback_geotable("#geoip3-table", res);
