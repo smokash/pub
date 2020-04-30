@@ -2,37 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>显示查询自己的IP地址</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <div
-      class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm"
-    >
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
       <h5 class="my-0 mr-md-auto font-weight-normal">
         线路:
-        <span id="currentip" class="badge badge-secondary">0.0.0.0</span> 流量:
+        <span id="currentip" class="badge badge-secondary">0.0.0.0</span>
+        流量:
         <span id="data_counter" class="badge badge-secondary">0</span>
       </h5>
     </div>
-    <div
-      class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center"
-    ></div>
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center"></div>
     <div class="container">
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 shadow-sm">
@@ -86,10 +73,7 @@
       </div>
       <footer></footer>
     </div>
-    <script
-      type="text/javascript"
-      src="//pv.sohu.com/cityjson?ie=utf-8"
-    ></script>
+    <script type="text/javascript" src="//pv.sohu.com/cityjson?ie=utf-8"></script>
     <script>
       $(function () {
         var ishttps = "https:" == document.location.protocol ? true : false;
@@ -101,9 +85,7 @@
           $("#currentip").html(res);
         });
 
-        $.get("//vps-bwh-us.myz.net/api.do?q=data_counter").done(function (
-          res
-        ) {
+        $.get("//vps-bwh-us.myz.net/api.do?q=data_counter").done(function (res) {
           $("#data_counter").html(res + "G");
         });
 
@@ -125,11 +107,9 @@
 
         if (returnCitySN) {
           $("#geoip1").html(returnCitySN["cip"]);
-          var get_ip_info_url =
-            "//ip-api.com/json/" + returnCitySN["cip"] + "?lang=zh-CN";
+          var get_ip_info_url = "//ip-api.com/json/" + returnCitySN["cip"] + "?lang=zh-CN";
           if (ishttps) {
-            get_ip_info_url =
-              "//vps-bwh-us.myz.net/ip.do?ip=" + returnCitySN["cip"];
+            get_ip_info_url = "//vps-bwh-us.myz.net/ip.do?ip=" + returnCitySN["cip"];
           }
           $.getJSON(get_ip_info_url)
             .done(function (res) {
@@ -170,8 +150,7 @@
         $.getJSON("//my-location-is.appspot.com/callback?callback=?")
           .done(function (data) {
             $("#geoip3").html("<tr><td>" + data.ip + "</td></tr>");
-            var get_ip_info_url =
-              "//ip-api.com/json/" + data.ip + "?lang=zh-CN";
+            var get_ip_info_url = "//ip-api.com/json/" + data.ip + "?lang=zh-CN";
             if (ishttps) {
               get_ip_info_url = "//vps-bwh-us.myz.net/ip.do?ip=" + data.ip;
             }
@@ -195,23 +174,12 @@
       var sc_security = "a33fc9df";
       var sc_https = 1;
     </script>
-    <script
-      type="text/javascript"
-      src="https://www.statcounter.com/counter/counter.js"
-      async
-    ></script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
     <noscript>
       <div class="statcounter">
-        <a
-          title="Web Analytics Made Easy -
-    StatCounter"
-          href="https://statcounter.com/"
-          target="_blank"
-          ><img
-            class="statcounter"
-            src="https://c.statcounter.com/12219739/0/a33fc9df/1/"
-            alt="Web Analytics Made Easy - StatCounter"
-        /></a>
+        <a title="Web Analytics Made Easy - StatCounter" href="https://statcounter.com/" target="_blank">
+          <img class="statcounter" src="https://c.statcounter.com/12219739/0/a33fc9df/1/" alt="Web Analytics Made Easy - StatCounter" />
+        </a>
       </div>
     </noscript>
     <!-- End of Statcounter Code -->
