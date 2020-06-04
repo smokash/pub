@@ -92,7 +92,7 @@
           $(id).html('<tr><td class="text-right" width="60">地区:</td><td class="text-left"><img src="/images/country/32/' + res.countryCode.toLowerCase() + '_32.png" width=28/> ' + res.country + " " + res.regionName + " " + res.city + '</td></tr><tr><td class="text-right">ISP:</td><td class="text-left">' + res.isp + "</td></tr>");
         }
 
-        $.getJSON("//whois.pconline.com.cn/ipJson.jsp").done(function (res) {
+        $.getJSON("//whois.pconline.com.cn/ipJson.jsp?json=true").done(function (res) {
           $("#geoip1").html(res["ip"]);
           var get_ip_info_url = "//ip-api.com/json/" + res["ip"] + "?lang=zh-CN";
           if (ishttps) {
