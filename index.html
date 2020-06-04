@@ -75,6 +75,8 @@
       <footer></footer>
     </div>
     <script>
+      var ishttps = "https:" == document.location.protocol ? true : false;
+
       function IPCallBack(res) {
         $("#geoip1").html(res["ip"]);
         var get_ip_info_url = "//ip-api.com/json/" + res["ip"] + "?lang=zh-CN";
@@ -91,11 +93,9 @@
       }
 
       $(function () {
-        var ishttps = "https:" == document.location.protocol ? true : false;
         $.ajaxSetup({
           timeout: 10000,
         });
-
         $.get("//vps-bwh-us.myz.net/ip.do").done(function (res) {
           $("#currentip").html(res);
         });
