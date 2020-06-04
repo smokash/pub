@@ -75,24 +75,8 @@
       <footer></footer>
     </div>
     <script>
-      var ishttps = "https:" == document.location.protocol ? true : false;
-
-      function IPCallBack(res) {
-        $("#geoip1").html(res["ip"]);
-        var get_ip_info_url = "//ip-api.com/json/" + res["ip"] + "?lang=zh-CN";
-        if (ishttps) {
-          get_ip_info_url = "//vps-bwh-us.myz.net/ip.do?ip=" + res["ip"];
-        }
-        $.getJSON(get_ip_info_url)
-          .done(function (res) {
-            callback_geotable("#geoip1-table", res);
-          })
-          .fail(function () {
-            console.log("faild!");
-          });
-      }
-
       $(function () {
+        var ishttps = "https:" == document.location.protocol ? true : false;
         $.ajaxSetup({
           timeout: 10000,
         });
@@ -107,6 +91,21 @@
         function callback_geotable(id, res) {
           $(id).html('<tr><td class="text-right" width="60">地区:</td><td class="text-left"><img src="/images/country/32/' + res.countryCode.toLowerCase() + '_32.png" width=28/> ' + res.country + " " + res.regionName + " " + res.city + '</td></tr><tr><td class="text-right">ISP:</td><td class="text-left">' + res.isp + "</td></tr>");
         }
+
+        $.getJSON("//whois.pconline.com.cn/ipJson.jsp").done(function (res) {
+          $("#geoip1").html(res["ip"]);
+          var get_ip_info_url = "//ip-api.com/json/" + res["ip"] + "?lang=zh-CN";
+          if (ishttps) {
+            get_ip_info_url = "//vps-bwh-us.myz.net/ip.do?ip=" + res["ip"];
+          }
+          $.getJSON(get_ip_info_url)
+            .done(function (res) {
+              callback_geotable("#geoip1-table", res);
+            })
+            .fail(function () {
+              console.log("faild!");
+            });
+        });
 
         if (ishttps) {
           $.getJSON("//api.myip.la/cn?json")
@@ -155,7 +154,6 @@
           });
       });
     </script>
-    <script type="text/javascript" src="//whois.pconline.com.cn/ipJson.jsp"></script>
     <!-- Default Statcounter code for myz http://myz.net -->
     <script type="text/javascript">
       var sc_project = 12219739;
