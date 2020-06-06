@@ -1,4 +1,4 @@
-# Jun/06/2020 03:36:33 by chnrouters
+# Jun/07/2020 03:36:33 by chnrouters
 #
 /ip firewall address-list
 remove [find list=chnroute_cnc ]
@@ -513,6 +513,8 @@ add address=114.60.0.0/14 list=chnroute_cnc
 add address=114.67.160.0/19 list=chnroute_cnc
 add address=114.67.192.0/18 list=chnroute_cnc
 add address=114.110.0.0/20 list=chnroute_cnc
+add address=114.110.64.0/18 list=chnroute_cnc
+add address=114.111.0.0/19 list=chnroute_cnc
 add address=114.112.48.0/20 list=chnroute_cnc
 add address=114.112.64.0/21 list=chnroute_cnc
 add address=114.112.80.0/20 list=chnroute_cnc
@@ -759,6 +761,7 @@ add address=122.144.192.0/19 list=chnroute_cnc
 add address=122.156.0.0/14 list=chnroute_cnc
 add address=122.188.0.0/14 list=chnroute_cnc
 add address=122.192.0.0/14 list=chnroute_cnc
+add address=122.248.48.0/20 list=chnroute_cnc
 add address=123.4.0.0/14 list=chnroute_cnc
 add address=123.8.0.0/13 list=chnroute_cnc
 add address=123.58.0.0/18 list=chnroute_cnc
