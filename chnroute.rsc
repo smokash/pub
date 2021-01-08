@@ -1,4 +1,4 @@
-# Jan/08/2021 03:36:23 by chnrouters
+# Jan/09/2021 03:36:25 by chnrouters
 #
 /ip firewall address-list
 remove [find list=chnroute ]
