@@ -1,4 +1,4 @@
-# Mar/13/2021 03:36:26 by chnrouters
+# Mar/14/2021 03:36:28 by chnrouters
 #
 /ip firewall address-list
 remove [find list=chnroute_tel ]
@@ -1321,7 +1321,6 @@ add address=182.18.8.0/21 list=chnroute_tel
 add address=182.18.16.0/20 list=chnroute_tel
 add address=182.18.32.0/19 list=chnroute_tel
 add address=182.18.72.0/21 list=chnroute_tel
-add address=182.18.104.0/21 list=chnroute_tel
 add address=182.23.184.0/21 list=chnroute_tel
 add address=182.23.200.0/21 list=chnroute_tel
 add address=182.32.0.0/12 list=chnroute_tel
