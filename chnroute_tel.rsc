@@ -1,4 +1,4 @@
-# Mar/19/2021 03:36:26 by chnrouters
+# Mar/20/2021 03:36:41 by chnrouters
 #
 /ip firewall address-list
 remove [find list=chnroute_tel ]
@@ -175,8 +175,7 @@ add address=45.124.124.0/22 list=chnroute_tel
 add address=45.126.112.0/22 list=chnroute_tel
 add address=45.126.120.0/22 list=chnroute_tel
 add address=45.127.144.0/21 list=chnroute_tel
-add address=45.195.4.0/23 list=chnroute_tel
-add address=45.195.6.0/24 list=chnroute_tel
+add address=45.195.4.0/22 list=chnroute_tel
 add address=45.248.8.0/22 list=chnroute_tel
 add address=45.249.212.0/22 list=chnroute_tel
 add address=45.251.8.0/22 list=chnroute_tel
@@ -1097,15 +1096,13 @@ add address=150.242.184.0/22 list=chnroute_tel
 add address=150.242.238.0/23 list=chnroute_tel
 add address=150.242.248.0/22 list=chnroute_tel
 add address=153.118.0.0/15 list=chnroute_tel
-add address=154.72.40.0/24 list=chnroute_tel
-add address=154.72.42.0/23 list=chnroute_tel
-add address=154.72.44.0/24 list=chnroute_tel
-add address=154.72.46.0/23 list=chnroute_tel
+add address=154.72.40.0/21 list=chnroute_tel
 add address=154.83.28.0/24 list=chnroute_tel
 add address=154.198.1.0/24 list=chnroute_tel
-add address=154.198.3.0/24 list=chnroute_tel
+add address=154.198.2.0/23 list=chnroute_tel
 add address=154.205.0.0/24 list=chnroute_tel
 add address=156.242.6.0/24 list=chnroute_tel
+add address=156.242.8.0/24 list=chnroute_tel
 add address=157.119.28.0/22 list=chnroute_tel
 add address=160.19.208.0/22 list=chnroute_tel
 add address=160.83.110.0/24 list=chnroute_tel
@@ -1687,6 +1684,7 @@ add address=223.223.192.0/20 list=chnroute_tel
 add address=223.240.0.0/13 list=chnroute_tel
 add address=223.255.0.0/17 list=chnroute_tel
 add address=223.255.252.0/23 list=chnroute_tel
+add address=2001:dc7::/32 list=chnroute_tel
 add address=2001:dd8:1::/48 list=chnroute_tel
 add address=2400:5280:f803::/48 list=chnroute_tel
 add address=2400:89c0:1050::/46 list=chnroute_tel
@@ -1823,8 +1821,8 @@ add address=2c0f:f7a8:805f::/48 list=chnroute_tel
 add address=2c0f:f7a8:8150::/48 list=chnroute_tel
 add address=2c0f:f7a8:815f::/48 list=chnroute_tel
 add address=2c0f:f7a8:8210::/47 list=chnroute_tel
-add address=2c0f:f7a8:9010::/48 list=chnroute_tel
+add address=2c0f:f7a8:9010::/47 list=chnroute_tel
 add address=2c0f:f7a8:9020::/48 list=chnroute_tel
 add address=2c0f:f7a8:9041::/48 list=chnroute_tel
-add address=2c0f:f7a8:9210::/48 list=chnroute_tel
+add address=2c0f:f7a8:9210::/47 list=chnroute_tel
 add address=2c0f:f7a8:9220::/48 list=chnroute_tel
