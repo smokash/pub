@@ -1,4 +1,4 @@
-# Mar/27/2021 03:36:29 by chnrouters
+# Mar/28/2021 03:36:28 by chnrouters
 #
 /ip firewall address-list
 remove [find list=chnroute_tel ]
@@ -186,12 +186,13 @@ add address=45.251.100.0/22 list=chnroute_tel
 add address=45.252.0.0/22 list=chnroute_tel
 add address=45.252.106.0/23 list=chnroute_tel
 add address=45.253.26.0/23 list=chnroute_tel
-add address=45.253.64.0/22 list=chnroute_tel
+add address=45.253.64.0/21 list=chnroute_tel
 add address=45.254.20.0/22 list=chnroute_tel
 add address=45.254.64.0/20 list=chnroute_tel
 add address=49.4.32.0/20 list=chnroute_tel
 add address=49.4.128.0/18 list=chnroute_tel
 add address=49.5.0.0/20 list=chnroute_tel
+add address=49.5.252.0/24 list=chnroute_tel
 add address=49.7.0.0/16 list=chnroute_tel
 add address=49.64.0.0/11 list=chnroute_tel
 add address=49.112.0.0/13 list=chnroute_tel
@@ -270,7 +271,7 @@ add address=61.190.0.0/15 list=chnroute_tel
 add address=63.140.0.0/24 list=chnroute_tel
 add address=63.140.3.0/24 list=chnroute_tel
 add address=63.140.4.0/22 list=chnroute_tel
-add address=63.140.8.0/23 list=chnroute_tel
+add address=63.140.8.0/24 list=chnroute_tel
 add address=63.140.13.0/24 list=chnroute_tel
 add address=63.140.14.0/24 list=chnroute_tel
 add address=66.102.240.0/21 list=chnroute_tel
@@ -527,6 +528,7 @@ add address=103.222.40.0/22 list=chnroute_tel
 add address=103.222.144.0/23 list=chnroute_tel
 add address=103.222.176.0/21 list=chnroute_tel
 add address=103.222.188.0/22 list=chnroute_tel
+add address=103.222.192.0/22 list=chnroute_tel
 add address=103.222.216.0/22 list=chnroute_tel
 add address=103.223.132.0/22 list=chnroute_tel
 add address=103.227.76.0/22 list=chnroute_tel
@@ -545,6 +547,7 @@ add address=103.234.128.0/23 list=chnroute_tel
 add address=103.235.85.0/24 list=chnroute_tel
 add address=103.235.87.0/24 list=chnroute_tel
 add address=103.235.136.0/22 list=chnroute_tel
+add address=103.235.148.0/22 list=chnroute_tel
 add address=103.235.200.0/22 list=chnroute_tel
 add address=103.235.220.0/22 list=chnroute_tel
 add address=103.235.224.0/19 list=chnroute_tel
