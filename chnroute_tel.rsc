@@ -1,4 +1,4 @@
-# Mar/29/2021 03:36:31 by chnrouters
+# Mar/30/2021 03:36:31 by chnrouters
 #
 /ip firewall address-list
 remove [find list=chnroute_tel ]
@@ -16,7 +16,6 @@ add address=1.192.0.0/13 list=chnroute_tel
 add address=1.202.0.0/15 list=chnroute_tel
 add address=1.204.0.0/14 list=chnroute_tel
 add address=5.10.136.0/22 list=chnroute_tel
-add address=5.10.140.0/24 list=chnroute_tel
 add address=5.10.142.0/23 list=chnroute_tel
 add address=5.154.132.0/23 list=chnroute_tel
 add address=5.154.136.0/22 list=chnroute_tel
@@ -310,7 +309,6 @@ add address=101.104.160.0/20 list=chnroute_tel
 add address=101.106.0.0/19 list=chnroute_tel
 add address=101.125.252.0/22 list=chnroute_tel
 add address=101.128.0.0/22 list=chnroute_tel
-add address=101.198.0.0/23 list=chnroute_tel
 add address=101.199.96.0/21 list=chnroute_tel
 add address=101.199.112.0/23 list=chnroute_tel
 add address=101.199.114.0/24 list=chnroute_tel
@@ -1084,7 +1082,6 @@ add address=145.14.82.0/24 list=chnroute_tel
 add address=145.14.84.0/24 list=chnroute_tel
 add address=145.14.86.0/24 list=chnroute_tel
 add address=145.14.88.0/24 list=chnroute_tel
-add address=145.14.90.0/24 list=chnroute_tel
 add address=145.14.92.0/24 list=chnroute_tel
 add address=146.196.56.0/22 list=chnroute_tel
 add address=146.222.79.0/24 list=chnroute_tel
@@ -1806,7 +1803,6 @@ add address=2a04:f580:9020::/48 list=chnroute_tel
 add address=2a04:f580:9030::/48 list=chnroute_tel
 add address=2a04:f580:9040::/48 list=chnroute_tel
 add address=2a04:f580:9050::/48 list=chnroute_tel
-add address=2a04:f580:9060::/48 list=chnroute_tel
 add address=2a04:f580:9070::/48 list=chnroute_tel
 add address=2a04:f580:9080::/48 list=chnroute_tel
 add address=2a04:f580:9090::/48 list=chnroute_tel
@@ -1818,7 +1814,6 @@ add address=2a04:f580:9220::/48 list=chnroute_tel
 add address=2a04:f580:9230::/48 list=chnroute_tel
 add address=2a04:f580:9240::/48 list=chnroute_tel
 add address=2a04:f580:9250::/48 list=chnroute_tel
-add address=2a04:f580:9260::/48 list=chnroute_tel
 add address=2a04:f580:9270::/48 list=chnroute_tel
 add address=2a04:f580:9280::/48 list=chnroute_tel
 add address=2a04:f580:9290::/48 list=chnroute_tel
