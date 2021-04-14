@@ -1,4 +1,4 @@
-# Apr/14/2021 03:36:31 by chnrouters
+# Apr/15/2021 03:36:31 by chnrouters
 #
 /ip firewall address-list
 remove [find list=chnroute_tel ]
@@ -341,7 +341,6 @@ add address=69.163.104.0/24 list=chnroute_tel
 add address=69.163.106.0/23 list=chnroute_tel
 add address=69.163.108.0/24 list=chnroute_tel
 add address=69.194.171.0/24 list=chnroute_tel
-add address=69.235.184.0/21 list=chnroute_tel
 add address=81.173.16.0/21 list=chnroute_tel
 add address=87.254.207.0/24 list=chnroute_tel
 add address=93.183.14.0/24 list=chnroute_tel
@@ -356,7 +355,6 @@ add address=101.39.0.0/16 list=chnroute_tel
 add address=101.40.0.0/16 list=chnroute_tel
 add address=101.49.128.0/22 list=chnroute_tel
 add address=101.50.56.0/22 list=chnroute_tel
-add address=101.52.236.0/22 list=chnroute_tel
 add address=101.52.240.0/20 list=chnroute_tel
 add address=101.53.100.0/22 list=chnroute_tel
 add address=101.54.0.0/21 list=chnroute_tel
@@ -1075,7 +1073,11 @@ add address=121.59.16.0/21 list=chnroute_tel
 add address=121.59.24.0/22 list=chnroute_tel
 add address=121.59.28.0/24 list=chnroute_tel
 add address=121.59.30.0/23 list=chnroute_tel
-add address=121.59.32.0/19 list=chnroute_tel
+add address=121.59.33.0/24 list=chnroute_tel
+add address=121.59.34.0/23 list=chnroute_tel
+add address=121.59.36.0/22 list=chnroute_tel
+add address=121.59.40.0/21 list=chnroute_tel
+add address=121.59.48.0/20 list=chnroute_tel
 add address=121.59.64.0/18 list=chnroute_tel
 add address=121.59.128.0/20 list=chnroute_tel
 add address=121.59.144.0/21 list=chnroute_tel
