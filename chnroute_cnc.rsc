@@ -1,4 +1,4 @@
-# May/08/2021 03:36:37 by chnrouters
+# May/09/2021 03:36:31 by chnrouters
 #
 /ip firewall address-list
 remove [find list=chnroute_cnc ]
@@ -27,7 +27,6 @@ add address=36.248.0.0/14 list=chnroute_cnc
 add address=39.64.0.0/11 list=chnroute_cnc
 add address=42.4.0.0/14 list=chnroute_cnc
 add address=42.48.0.0/15 list=chnroute_cnc
-add address=42.51.0.0/16 list=chnroute_cnc
 add address=42.52.0.0/14 list=chnroute_cnc
 add address=42.56.0.0/14 list=chnroute_cnc
 add address=42.63.0.0/16 list=chnroute_cnc
@@ -224,7 +223,7 @@ add address=101.16.0.0/12 list=chnroute_cnc
 add address=101.36.128.0/17 list=chnroute_cnc
 add address=101.38.0.0/16 list=chnroute_cnc
 add address=101.41.0.0/16 list=chnroute_cnc
-add address=101.52.236.0/22 list=chnroute_cnc
+add address=101.52.236.0/23 list=chnroute_cnc
 add address=101.52.240.0/20 list=chnroute_cnc
 add address=101.64.0.0/13 list=chnroute_cnc
 add address=101.72.0.0/14 list=chnroute_cnc
@@ -265,7 +264,6 @@ add address=103.17.40.0/22 list=chnroute_cnc
 add address=103.18.224.0/22 list=chnroute_cnc
 add address=103.19.46.0/23 list=chnroute_cnc
 add address=103.19.64.0/22 list=chnroute_cnc
-add address=103.22.188.0/22 list=chnroute_cnc
 add address=103.24.116.0/24 list=chnroute_cnc
 add address=103.24.118.0/23 list=chnroute_cnc
 add address=103.24.228.0/22 list=chnroute_cnc
@@ -356,7 +354,6 @@ add address=103.143.16.0/22 list=chnroute_cnc
 add address=103.143.228.0/23 list=chnroute_cnc
 add address=103.144.159.0/24 list=chnroute_cnc
 add address=103.147.124.0/24 list=chnroute_cnc
-add address=103.150.72.0/23 list=chnroute_cnc
 add address=103.151.142.0/23 list=chnroute_cnc
 add address=103.151.148.0/23 list=chnroute_cnc
 add address=103.152.76.0/23 list=chnroute_cnc
@@ -461,6 +458,7 @@ add address=103.252.36.0/22 list=chnroute_cnc
 add address=103.253.60.0/22 list=chnroute_cnc
 add address=103.253.224.0/22 list=chnroute_cnc
 add address=103.255.88.0/21 list=chnroute_cnc
+add address=103.255.200.0/22 list=chnroute_cnc
 add address=106.2.128.0/19 list=chnroute_cnc
 add address=106.2.160.0/21 list=chnroute_cnc
 add address=106.2.168.0/22 list=chnroute_cnc
