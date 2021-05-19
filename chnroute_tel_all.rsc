@@ -1,4 +1,4 @@
-# May/19/2021 03:36:27 by chnrouters
+# May/20/2021 03:36:33 by chnrouters
 #
 /ip firewall address-list
 remove [find list=chnroute_tel ]
@@ -353,6 +353,7 @@ add address=101.39.0.0/16 list=chnroute_tel
 add address=101.40.0.0/16 list=chnroute_tel
 add address=101.49.128.0/22 list=chnroute_tel
 add address=101.50.56.0/22 list=chnroute_tel
+add address=101.52.236.0/23 list=chnroute_tel
 add address=101.52.240.0/20 list=chnroute_tel
 add address=101.53.100.0/22 list=chnroute_tel
 add address=101.54.0.0/21 list=chnroute_tel
@@ -576,12 +577,14 @@ add address=103.149.242.0/24 list=chnroute_tel
 add address=103.152.28.0/23 list=chnroute_tel
 add address=103.152.56.0/23 list=chnroute_tel
 add address=103.156.68.0/23 list=chnroute_tel
+add address=103.161.220.0/23 list=chnroute_tel
 add address=103.161.254.0/23 list=chnroute_tel
 add address=103.192.188.0/22 list=chnroute_tel
 add address=103.192.212.0/22 list=chnroute_tel
 add address=103.192.252.0/22 list=chnroute_tel
 add address=103.196.88.0/21 list=chnroute_tel
 add address=103.198.124.0/22 list=chnroute_tel
+add address=103.198.180.0/23 list=chnroute_tel
 add address=103.202.92.0/22 list=chnroute_tel
 add address=103.202.96.0/20 list=chnroute_tel
 add address=103.202.112.0/22 list=chnroute_tel
@@ -866,6 +869,7 @@ add address=116.128.0.0/17 list=chnroute_tel
 add address=116.192.0.0/16 list=chnroute_tel
 add address=116.193.176.0/21 list=chnroute_tel
 add address=116.196.64.0/18 list=chnroute_tel
+add address=116.196.176.0/21 list=chnroute_tel
 add address=116.198.0.0/18 list=chnroute_tel
 add address=116.198.144.0/20 list=chnroute_tel
 add address=116.198.160.0/20 list=chnroute_tel
@@ -1197,6 +1201,7 @@ add address=139.200.0.0/13 list=chnroute_tel
 add address=139.220.192.0/22 list=chnroute_tel
 add address=139.220.240.0/22 list=chnroute_tel
 add address=140.75.0.0/16 list=chnroute_tel
+add address=140.179.224.0/19 list=chnroute_tel
 add address=140.210.0.0/19 list=chnroute_tel
 add address=140.210.64.0/18 list=chnroute_tel
 add address=140.224.0.0/16 list=chnroute_tel
